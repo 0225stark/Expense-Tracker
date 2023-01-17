@@ -1,0 +1,14 @@
+const [newtitle,setnewtitle] = useState("");
+    
+const [title,settitle] = useState(props.title);
+
+const changeHandler = (event) =>{
+    setnewtitle(event.target.value);
+}
+
+const clickHandler = () =>{
+    settitle(newtitle);
+}
+
+<input type="text" value={ newtitle } onChange={ changeHandler }></input>
+<button onClick={ clickHandler }>Change Description</button>
